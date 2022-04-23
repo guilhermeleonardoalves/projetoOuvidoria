@@ -1,0 +1,86 @@
+#SISTEMA DE OUVIDORIA
+opcao = 2
+manifestacoes = []
+elogio = []
+reclamacao = []
+sugestao = []
+#[[reclamacao],[manifestacoes]]
+#[[elogio],[manifestacoes]]
+#[[sugestao],[manifestacoes]]
+
+
+
+
+
+
+
+print('Bem vindo a ouvidoria ABC!')
+while opcao != 10:
+
+
+#while 1:
+    print('Opções:')
+    print('1) Listar todas as manifestações')
+    print('2) Listar todas as sugestões')
+    print('3) Listar todas as reclamações')
+    print('4) Listar todos os elogios')
+    print('5) Enviar uma nova manifestação')
+    print('6) Pesquisar por número de protocolo')
+    print('7) Sair')
+    print('')
+    opcao = int(input('Digite a opção: '))
+
+    if opcao < 1 or opcao > 7:
+       print('Digite uma opção válida')
+#opção 1: LISTAR TODAS AS MANIFESTAÇÕES
+
+    elif opcao == 1:
+        print(manifestacoes)
+
+    elif opcao == 5:
+        protocolo = str(len(manifestacoes) + 1)
+        nome = str(input('Diite seu nome: '))
+
+        tipo = str(input('1) para sugestão  2)para reclamação 3)para elogio: '))
+
+        if tipo == 1:
+            reclamacao.append(protocolo + ('#') + nome + ('#') + tipo + ('#') + manifestacao)
+        elif tipo == 2:
+            sugestao.append(protocolo + ('#') + nome + ('#') + tipo + ('#') + manifestacao)
+        elif tipo == 3:
+            elogio.append(protocolo + ('#') + nome + ('#') + tipo + ('#') + manifestacao)
+
+        problema = input('Digite o problema: ')
+        manifestacao = protocolo + '#' + nome + '#' + tipo + '#' + problema
+        maniquebrada = manifestacao.split('#')
+        manifestacoes.append(manifestacao)
+
+#DIGITAR NOVA MANIFESTAÇÃO
+'''
+    if opcao == 5:
+        nome = str(input('Digite seu nome: '))
+        tipo = str(input('Digite o tipo da sua manifestação: 1) Para reclamação'
+                         '2 para sugestão 3) para elogio: '))
+        if tipo == '1':
+            reclamacao.append(id + ('#') + tipo + ('#'))
+        elif tipo == '2':
+          tipo = ('Sugestão')
+          #sugestao.append(manifestacao)
+        elif tipo == '3':
+          tipo = ('Elogio')
+          #elogio.append(manifestacao)
+        problema = str(input('Digite sua manifestação: '))
+        protocolo = str(len(manifestacoes)+1)
+        manifestacao = protocolo + '#' + nome + '#' + tipo + '#' + problema
+        maniquebrada = manifestacao.split('#')
+        manifestacoes.append(manifestacao)
+        print(maniquebrada[0],(maniquebrada[1]),(maniquebrada[2]),(maniquebrada[3]))
+'''
+#opcao = 2
+#manifestacoes = []
+#elogio = []
+#reclaamacao = []
+#sugestao = []
+#print('Bem vindo a ouvidoria ABC')
+
+
